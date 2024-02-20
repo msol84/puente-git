@@ -1,12 +1,12 @@
 :root {
     --primary-color: #171717;
     --secondary-color: #fafafa;
-    --acent-color: #ff50aa;
+    --acent-color: #a855f7;
 }
 :root.dark {
     --primary-color: #fafafa;
     --secondary-color: #171717;
-    --acent-color: #ff50aa;
+    --acent-color: #8100fa;
 }
 
 * {
@@ -26,12 +26,13 @@ main {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 4rem;
+    min-height: 100vh;
 }
 
 .topNav {
     font-weight: bold;
     font-size: 1.25rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,6 +49,8 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    list-style: none;
+    gap: 1rem;
 }
 
 .topNav a {
@@ -60,6 +63,10 @@ main {
     color: var(--acent-color);
 }
 
+.topNav a.selected {
+    color: var(--acent-color);
+}
+
 #ColorMode {
     border: 2px solid var(--secondary-color);
     border-radius: 0.5rem;
@@ -69,7 +76,17 @@ main {
     transition: border-color ease-out 0.3s, color ease-out 0.3s;
 }
 
+#ColorMode:hover {
+    border: 2px solid var(--acent-color);
+    color: var(--acent-color);
+}
+
 #ColorMode.activated {
     border: 2px solid var(--acent-color);
     color: var(--acent-color);
+}
+
+#ColorMode.activated:hover {
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
