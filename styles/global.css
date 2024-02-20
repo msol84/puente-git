@@ -1,20 +1,37 @@
 :root {
     --primary-color: #171717;
     --secondary-color: #fafafa;
-    --acent-color: #b81481;
+    --acent-color: #ff50aa;
 }
 :root.dark {
     --primary-color: #fafafa;
     --secondary-color: #171717;
-    --acent-color: #b81481;
+    --acent-color: #ff50aa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 main {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    padding: 4rem;
 }
 
 .topNav {
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -34,7 +51,7 @@ main {
 }
 
 .topNav a {
-    padding: 4px 8px;
+    padding: 0.5rem 0;
     color: var(--secondary-color);
     transition: color ease-out 0.3s;
 }
@@ -45,12 +62,14 @@ main {
 
 #ColorMode {
     border: 2px solid var(--secondary-color);
-    padding: 4px 8px;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
     background-color: transparent;
+    color: var(--secondary-color);
     transition: border-color ease-out 0.3s, color ease-out 0.3s;
 }
 
-#ColorMode:active {
+#ColorMode.activated {
     border: 2px solid var(--acent-color);
     color: var(--acent-color);
 }
