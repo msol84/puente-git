@@ -1,0 +1,56 @@
+:root {
+    --primary-color: #171717;
+    --secondary-color: #fafafa;
+    --acent-color: #b81481;
+}
+:root.dark {
+    --primary-color: #fafafa;
+    --secondary-color: #171717;
+    --acent-color: #b81481;
+}
+
+main {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.topNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--primary-color);
+}
+
+.topNav menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.topNav a {
+    padding: 4px 8px;
+    color: var(--secondary-color);
+    transition: color ease-out 0.3s;
+}
+
+.topNav a:hover {
+    color: var(--acent-color);
+}
+
+#ColorMode {
+    border: 2px solid var(--secondary-color);
+    padding: 4px 8px;
+    background-color: transparent;
+    transition: border-color ease-out 0.3s, color ease-out 0.3s;
+}
+
+#ColorMode:active {
+    border: 2px solid var(--acent-color);
+    color: var(--acent-color);
+}
